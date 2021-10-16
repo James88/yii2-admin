@@ -18,7 +18,7 @@ $opts = Json::htmlEncode([
 ]);
 $this->registerJs("var _opts = {$opts};");
 $this->registerJs($this->render('_script.js'));
-$animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>';
+$animateIcon = ' <i class="fas fa-sync"></i>';
 ?>
 <h1><?=Html::encode($this->title);?></h1>
 <div class="row">
@@ -42,7 +42,7 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
             <input class="form-control search" data-target="available"
                    placeholder="<?=Yii::t('rbac-admin', 'Search for available');?>">
             <span class="input-group-btn">
-                <?=Html::a('<span class="glyphicon glyphicon-refresh"></span>', ['refresh'], [
+                <?=Html::a('<span class="fas fa-sync"></span>', ['refresh'], [
     'class' => 'btn btn-default',
     'id' => 'btn-refresh',
 ]);?>
