@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ],
         ])
         ?>
+        <?= Html::a('继续添加', ['create', 'id' => $model->id], ['class' => 'btn btn-info']) ?>
     </p>
 
     <?=
