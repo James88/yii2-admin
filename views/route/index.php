@@ -18,7 +18,6 @@ $opts = Json::htmlEncode([
 ]);
 $this->registerJs("var _opts = {$opts};");
 $this->registerJs($this->render('_script.js'));
-$animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></i>';
 ?>
 <h1><?=Html::encode($this->title);?></h1>
 <div class="row">
@@ -27,7 +26,7 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
             <input id="inp-route" type="text" class="form-control"
                    placeholder="<?=Yii::t('rbac-admin', 'New route(s)');?>">
             <span class="input-group-btn">
-                <?=Html::a(Yii::t('rbac-admin', 'Add') . $animateIcon, ['create'], [
+                <?=Html::a(Yii::t('rbac-admin', 'Add'), ['create'], [
     'class' => 'btn btn-success',
     'id' => 'btn-new',
 ]);?>
@@ -42,7 +41,7 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
             <input class="form-control search" data-target="available"
                    placeholder="<?=Yii::t('rbac-admin', 'Search for available');?>">
             <span class="input-group-btn">
-                <?=Html::a('<span class="glyphicon glyphicon-refresh"></span>', ['refresh'], [
+                <?=Html::a('<span class="fas fa-sync"></span>', ['refresh'], [
     'class' => 'btn btn-default',
     'id' => 'btn-refresh',
 ]);?>
@@ -52,12 +51,12 @@ $animateIcon = ' <i class="glyphicon glyphicon-refresh glyphicon-refresh-animate
     </div>
     <div class="col-sm-1">
         <br><br>
-        <?=Html::a('&gt;&gt;' . $animateIcon, ['assign'], [
+        <?=Html::a('&gt;&gt;', ['assign'], [
     'class' => 'btn btn-success btn-assign',
     'data-target' => 'available',
     'title' => Yii::t('rbac-admin', 'Assign'),
 ]);?><br><br>
-        <?=Html::a('&lt;&lt;' . $animateIcon, ['remove'], [
+        <?=Html::a('&lt;&lt;', ['remove'], [
     'class' => 'btn btn-danger btn-assign',
     'data-target' => 'assigned',
     'title' => Yii::t('rbac-admin', 'Remove'),
